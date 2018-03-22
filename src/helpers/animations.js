@@ -1,19 +1,18 @@
 export default function makeAnimations(scene) {
-    // TONS of animations. Everything animation-related is ugly and stupid below. 
+    // TONS of animations. Everything animation-related is ugly and stupid below.
     // TODO:  maybe use JSON to load animations
     let config = {
         key: 'brickTile',
         frames: scene.anims.generateFrameNumbers('tiles', { start: 14, end: 14, first: 14 })
     };
     scene.anims.create(config);
+
     config = {
         key: 'blockTile',
         frames: scene.anims.generateFrameNumbers('tiles', { start: 43, end: 43, first: 43 })
     };
-
-
-    
     scene.anims.create(config);
+
     config = {
         key: 'runSuper',
         frames: scene.anims.generateFrameNumbers('mario', { start: 0, end: 2, first: 0 }),
@@ -22,9 +21,19 @@ export default function makeAnimations(scene) {
         repeatDelay: 0
     };
     scene.anims.create(config);
-    config.key = "run";
-    config.frames = scene.anims.generateFrameNumbers('mario', { start: 17, end: 19 }),
-        scene.anims.create(config);
+
+    config = {
+      key: "run",
+      frames: scene.anims.generateFrameNumbers('focker', { start: 3, end: 6 }),
+      frameRate: 6,
+      repeat: -1,
+      repeatDelay: 0
+    }
+    scene.anims.create(config);
+    // config.key = "run";
+    // config.frameFrate = 1;
+    // config.frames = scene.anims.generateFrameNumbers('focker', { start: 0, end: 2 }),
+    //     scene.anims.create(config);
     config = {
         key: 'jumpSuper',
         frames: scene.anims.generateFrameNumbers('mario', { start: 4, end: 4 }),
@@ -37,7 +46,7 @@ export default function makeAnimations(scene) {
         config.key = "death";
         config.frames = scene.anims.generateFrameNumbers('mario', { start: 22, end: 22 }),
             scene.anims.create(config);
-    
+
 
 
     config = {
@@ -45,11 +54,11 @@ export default function makeAnimations(scene) {
         frames: scene.anims.generateFrameNumbers('mario', { start: 6, end: 6, first: 6 }),
     };
     scene.anims.create(config);
-    
+
     config.key = "stand";
-    config.frames = scene.anims.generateFrameNumbers('mario', { start: 23, end: 23 }),
+    config.frames = scene.anims.generateFrameNumbers('focker', { start: 0, end: 0 }),
     scene.anims.create(config);
-    
+
     config = {
         key: 'turnSuper',
         frames: scene.anims.generateFrameNumbers('mario', { start: 3, end: 3, first: 3 }),

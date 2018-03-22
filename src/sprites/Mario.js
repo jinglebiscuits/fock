@@ -207,12 +207,12 @@ export default class Mario extends Phaser.GameObjects.Sprite {
   }
 
   enemyBounce(enemy) {
-    // Force Mario y-position up a bit (on top of the enemy) to avoid getting killed 
+    // Force Mario y-position up a bit (on top of the enemy) to avoid getting killed
     // by neigbouring enemy before being able to bounce
     this.body.y = enemy.body.y-this.body.height;
     // TODO: if jump-key is down, add a boost value to jump-velocity to use and init jump for controls to handle.
     this.body.setVelocityY(-150);
-    
+
   }
 
   hurtBy(enemy) {
@@ -251,7 +251,7 @@ export default class Mario extends Phaser.GameObjects.Sprite {
 
   small() {
     this.body.setSize(10, 10);
-    this.body.offset.set(3, 22);
+    this.body.offset.set(3, 70);
   }
   large() {
     this.body.setSize(10, 22);
@@ -259,7 +259,7 @@ export default class Mario extends Phaser.GameObjects.Sprite {
   }
 
   die() {
-    this.scene.music.pause(); 
+    this.scene.music.pause();
     this.play("death");
     this.scene.sound.playAudioSprite('sfx', 'smb_mariodie');
 

@@ -1,0 +1,83 @@
+{
+	"textures": [
+		{
+			"image": "focker.png",
+			"format": "RGBA8888",
+			"size": {
+				"w": 63,
+				"h": 246
+			},
+			"scale": 0.5,
+			"frames": [
+				{
+					"filename": "fock_dude1.png",
+					"frame": {
+						"x": 1,
+						"y": 1,
+						"w": 61,
+						"h": 80
+					},
+					"rotated": false,
+					"trimmed": false,
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 61,
+						"h": 80
+					},
+					"sourceSize": {
+						"w": 61,
+						"h": 80
+					}
+				},
+				{
+					"filename": "fock_dude2.png",
+					"frame": {
+						"x": 1,
+						"y": 83,
+						"w": 61,
+						"h": 80
+					},
+					"rotated": false,
+					"trimmed": false,
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 61,
+						"h": 80
+					},
+					"sourceSize": {
+						"w": 61,
+						"h": 80
+					}
+				},
+				{
+					"filename": "fock_dude3.png",
+					"frame": {
+						"x": 1,
+						"y": 165,
+						"w": 61,
+						"h": 80
+					},
+					"rotated": false,
+					"trimmed": false,
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 61,
+						"h": 80
+					},
+					"sourceSize": {
+						"w": 61,
+						"h": 80
+					}
+				}
+			]
+		}
+	],
+	"meta": {
+		"app": "https://www.codeandweb.com/texturepacker",
+		"version": "3.0",
+		"smartupdate": "$TexturePacker:SmartUpdate:3be46a2fd12cfc197e3c459c21e0f4c2:1bc1e2d4d9525080a7590456f485e21b:5cda910140df5f38842acabfc83cfca3$"
+	}
+}

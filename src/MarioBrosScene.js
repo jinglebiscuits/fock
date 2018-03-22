@@ -46,7 +46,7 @@ class MarioBrosScene extends Phaser.Scene {
     // Define all sprite animations we'll use
     makeAnimations(this);
 
-    // Add the map 
+    // Add the map
     this.map = this.make.tilemap({ key: 'map' });
     this.tileset = this.map.addTilesetImage('SuperMarioBros-World1-1', 'tiles');
 
@@ -70,14 +70,14 @@ class MarioBrosScene extends Phaser.Scene {
     this.mario = new Mario({
       scene: this,
       key: 'mario',
-      x: 16 * 6, // 3500, 
+      x: 16 * 6, // 3500,
       y: this.sys.game.config.height - 48 - 48
     });
 
     // This group contains all enemies for collision and calling update-methods
     this.enemyGroup = this.add.group();
 
-    // The map has one object layer with enemies as stamped tiles, 
+    // The map has one object layer with enemies as stamped tiles,
     // each tile has properties containing info on what enemy it represents.
     this.map.getObjectLayer("enemies").objects.forEach(
       (enemy) => {
@@ -146,7 +146,7 @@ class MarioBrosScene extends Phaser.Scene {
           this.destinations[modifier.properties.id] = { x: modifier.x + modifier.width / 2, top: (modifier.y < 16) };
           break;
         case "room":
-          // Adds a "room" that is just info on bounds so that we can add sections below pipes 
+          // Adds a "room" that is just info on bounds so that we can add sections below pipes
           // in an level just using one tilemap.
           this.rooms.push({ x: modifier.x, width: modifier.width, sky: modifier.properties.sky });
           break;
@@ -310,7 +310,7 @@ class MarioBrosScene extends Phaser.Scene {
       if (this.mario.y > 240 || (this.attractMode.recording.length <= this.attractMode.current + 2) || this.attractMode.current === 14000) {
         this.attractMode.current = 0;
         this.attractMode.time = 0;
-        this.mario.x = 16 * 6; // 3500, 
+        this.mario.x = 16 * 6; // 3500,
         this.tick = 0;
         this.registry.set('restartScene', true);
 

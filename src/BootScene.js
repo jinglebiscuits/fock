@@ -15,6 +15,7 @@ class BootScene extends Phaser.Scene {
         this.load.spritesheet('tiles-16bit', 'assets/images/super-mario-16bit.png', { frameWidth: 16, frameHeight: 16 });
         // Spritesheets with fixed sizes. Should be replaced with atlas:
         this.load.spritesheet('mario', 'assets/images/mario-sprites.png', { frameWidth: 16, frameHeight: 32 });
+        this.load.spritesheet('focker', 'assets/images/focker_walk.png', { frameWidth: 63, frameHeight: 82 });
         this.load.spritesheet('sprites16', 'assets/images/16x16sprites.png', { frameWidth: 16, frameHeight: 16 });
         // Beginning of an atlas to replace spritesheets
         this.load.atlas('mario-sprites', 'assets/mario-sprites.png', 'assets/mario-sprites.json');
@@ -23,16 +24,16 @@ class BootScene extends Phaser.Scene {
           'assets/music/overworld.ogg',
           'assets/music/overworld.mp3'
         ]);
-    
+
         this.load.audioSprite('sfx', [
           'assets/audio/sfx.ogg',
           'assets/audio/sfx.mp3'
         ], 'assets/audio/sfx.json', {
             instances: 4
           });
-    
+
         this.load.bitmapFont('font', 'assets/fonts/font.png', 'assets/fonts/font.fnt');
-    
+
         // Load plugin for animated tiles. This is just a first build of an upcoming plugin.
         // It's not optimized and lack features. The source code will be released when an
         // official first version is released.
@@ -46,7 +47,7 @@ class BootScene extends Phaser.Scene {
       console.log("BOOTED");
 //      this.scene.start('MarioBrosScene');
        this.scene.start('TitleScene');
-        
+
     }
 }
 
